@@ -24,7 +24,7 @@ class App extends Component{
       responseType: "json"
     }).then(function (response) {
         console.log(response);
-        this.handleState({
+        this.setState({
           chartData:{
             
             labels:['1', '2', '3', '4', '5', '6','7','8','9','10','11','12'],
@@ -67,7 +67,7 @@ class App extends Component{
         }); //end setstate
 
     }); //end then
-    this.setState(update)
+   
   }
 
   getChartData(){
