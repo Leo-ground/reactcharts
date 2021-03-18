@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Bar, Bubble, Line, Pie } from "react-chartjs-2";
+import { Bar, Bubble, Line, Pie, Doughnut } from "react-chartjs-2";
 
-class Chart extends Component {
+class ChartDoughnut extends Component {
   constructor(props) {
     super(props);
   }
@@ -15,7 +15,7 @@ class Chart extends Component {
   render() {
     return (
       <div className="chart">
-        <Bar
+        <Doughnut
           data={this.props.chartData} //현 클래스의 state의 chartdata를 의미
           options={{
             title: {
@@ -36,4 +36,4 @@ class Chart extends Component {
     );
   }
 }
-export default Chart;
+export default ChartDoughnut;
