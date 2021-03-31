@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Bar, Bubble, Line, Pie } from "react-chartjs-2";
-
+import { Bar } from "react-chartjs-2";
+//, Bubble, Line, Pie
 class Chart extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   static defaultProps = {
     displayTitle: true,
@@ -22,7 +22,7 @@ class Chart extends Component {
               type: 'bar',
               display: this.props.displayTitle,
               text: this.props.range + " 판매량",
-              fontSize: 25,
+              fontSize: 35,
             },
             legend: {
               display: this.props.displayLegend,

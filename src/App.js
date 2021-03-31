@@ -1,15 +1,17 @@
-import "./App.css";
+//import "./App.css";
 import React, { Component } from "react";
 import Chart from "./components/Chart";
 import ChartLine from "./components/ChartLine";
 import ChartDoughnut from "./components/ChartDoughnut";
-import Option from "./components/Option";
+//import Option from "./components/Option";
 import Nav from "./components/Nav";
 import axios from "axios";
 import {Transition, animated} from 'react-spring/renderprops';
-import LineChart from "./components/LineChart";
-import BarChart from "./components/BarChart";
-import DoughnutChart from "./components/DoughnutChart";
+//import LineChart from "./components/LineChart";
+//import BarChart from "./components/BarChart";
+//import DoughnutChart from "./components/DoughnutChart";
+
+
 
 
 //function App() {
@@ -42,7 +44,7 @@ class App extends Component {
       url: "http://localhost/chart/month/sale/"+seacherYear,
       responseType: "json",
     }).then( (response)=> {
-      console.log(response)
+      //console.log(response)
       var newData2020=[];
       var newData2021=[];
       var newDataMONTH=[];
@@ -56,7 +58,7 @@ class App extends Component {
       data2021.forEach(d => {
         newData2021.push(d.TOTAL_SALE);
       });
-      console.log(newData2020,newData2021);
+      //console.log(newData2020,newData2021);
       
       
       this.setState({
@@ -128,10 +130,9 @@ class App extends Component {
   
 
   render() {
-    console.log("render")
+    //console.log("render")
     return (
       <div className="App">
-       
         <Nav toggle={this.toggle}
         toggleBar={this.toggleBar}                  
         toggleLine={this.toggleLine}
@@ -146,6 +147,7 @@ class App extends Component {
          this.getChartData()}.bind(this)}  
         
          />
+         
         <Transition
             native 
             items={this.state.showChartBar}
@@ -159,7 +161,7 @@ class App extends Component {
                   range={this.state.searchCondition.range}
                   legendPosition="top"
                 />
-               
+              
             </animated.div>
           ))}
         </Transition>

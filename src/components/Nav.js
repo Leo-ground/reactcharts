@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import {Spring} from 'react-spring/renderprops';
-
 class Nav extends Component {
 
-    render() {
+    render() { 
         return (
             <Spring
                 from={{ opacity:0, marginTop: -500}}
@@ -12,7 +11,7 @@ class Nav extends Component {
                 {props => (
                     <div style={props}>
                         <div style={navStyle}>
-                            <button style={btn} onClick={this.props.toggle}> Chart </button>
+                            {/* <button style={btn} onClick={this.props.toggle}> Chart </button> */}
                             <button style={btn} onClick={this.props.toggleBar}> Bar </button>
                             <button style={btn} onClick={this.props.toggleLine}> Line </button>
                             <button style={btn} onClick={this.props.toggleDoughnut}> Doughnut </button>
@@ -41,6 +40,6 @@ const btn ={
     margin: '1px'
 }
 
-const optionStyle={
-}
+// const optionStyle={
+// }
 export default Nav

@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Bar, Bubble, Line, Pie, Doughnut } from "react-chartjs-2";
+import {  Doughnut } from "react-chartjs-2";
 
 class ChartDoughnut extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   static defaultProps = {
     displayTitle: true,
